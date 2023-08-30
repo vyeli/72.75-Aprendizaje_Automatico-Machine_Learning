@@ -11,6 +11,7 @@ numpy = "*"
 openpyxl = "*"
 nltk = "*"
 scikit-learn = "*"
+seaborn = "*"
 
 [dev-packages]
 
