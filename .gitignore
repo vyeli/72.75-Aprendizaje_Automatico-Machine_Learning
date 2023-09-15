@@ -160,3 +160,5 @@ cython_debug/
 #.idea/
 
 TP1/Pipfile.lock
+
+.vscode
