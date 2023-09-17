@@ -13,7 +13,7 @@ class Node:
         return self.value is not None
     
 class DecisionTree:
-    def __init__(self, min_samples_split = 2, max_depth = 100, n_features = None):
+    def __init__(self, min_samples_split = 2, max_depth = 10, n_features = None):
         self.min_samples_split = min_samples_split
         self.max_depth = max_depth
         self.n_features = n_features
@@ -23,7 +23,7 @@ class DecisionTree:
         self.n_features = X.shape[1] if not self.n_features else min(self.n_features, X.shape[1])
         self.root = self._grow_tree(X, y)
     
-    def grow_tree(self, X, y, depth = 0):
+    def _grow_tree(self, X, y, depth = 0):
         n_samples, n_features = X.shape
         n_labels = len(np.unique(y))
 
@@ -32,10 +32,10 @@ class DecisionTree:
             leaf_value = self._most_common_label(y)
             return Node(value = leaf_value)
 
-        feat_idx = np.random.choice(n_features, self.n_features, replace = False)
+        feat_idxs = np.random.choice(n_features, size=self.n_features, replace = False)
 
         # find the best split feature and threshold
-        best_threshold, best_feature =  self._best_split(X, y, feat_idx)
+        best_feature, best_threshold =  self._best_split(X, y, feat_idxs)
         #create child nodes
         left_idxs, right_idxs = self._split(X[:, best_feature], best_threshold)
         left = self._grow_tree(X[left_idxs, :], y[left_idxs], depth + 1)
@@ -43,11 +43,11 @@ class DecisionTree:
 
         return Node(best_feature, best_threshold, left, right)
 
-    def _best_split(self, X, y, feat_idx):
+    def _best_split(self, X, y, feat_idxs):
         best_gain = -1
         split_idx, split_threshold = None, None
 
-        for feat_index in feat_idx:
+        for feat_index in feat_idxs:
             X_column = X[:, feat_index]
             thresholds = np.unique(X_column)
             for threshold in thresholds:
