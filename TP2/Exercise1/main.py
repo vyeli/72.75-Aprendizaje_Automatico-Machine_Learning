@@ -1,5 +1,6 @@
 import pandas as pd
 from ID3 import DecisionTree
+from RandomForest import RandomForest
 from sklearn import datasets
 from metrics import MetricsCalculator
 from sklearn.model_selection import train_test_split
@@ -20,4 +21,9 @@ decision_tree.fit(X_train, y_train)
 predictions = decision_tree.predict(X_test)
 metrics = MetricsCalculator()
 acc = metrics.accuracy(y_test, predictions)
-print("Accuracy:", acc)
+print("Decision Tree Accuracy:", acc)
+random_forest = RandomForest()
+random_forest.fit(X_train, y_train)
+predictions = random_forest.predict(X_test)
+acc = metrics.accuracy(y_test, predictions)
+print("Random Forest Accuracy:", acc)
