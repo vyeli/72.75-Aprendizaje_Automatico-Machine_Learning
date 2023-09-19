@@ -1,8 +1,18 @@
 import pandas as pd
+import os
+
 from ID3 import DecisionTree
 from RandomForest import RandomForest
 from metrics import MetricsCalculator
 from sklearn.model_selection import train_test_split
+
+# Create the output folder if it doesn't exist
+if not os.path.exists("Output/ex1/decision_tree"):
+    os.makedirs("Output/ex1/decision_tree")
+
+# Create the output folder if it doesn't exist
+if not os.path.exists("Output/ex1/random_forest"):
+    os.makedirs("Output/ex1/random_forest")
 
 # Read the CSV file into a DataFrame and clean the data (remove the rows with missing values)
 df = pd.read_csv("Data/german_credit.csv", delimiter=",")
@@ -19,7 +29,6 @@ predictions = decision_tree.predict(X_test)
 metrics = MetricsCalculator()
 cm = metrics.confusion_matrix(y_test, predictions, 1)
 metrics.plot_confusion_matrix(cm, "decision_tree")
-metrics.plot_accuracy_over_testing_percentage(X, y, runs=5)
 
 #random forest
 random_forest = RandomForest()
@@ -28,3 +37,4 @@ predictions = random_forest.predict(X_test)
 cm = metrics.confusion_matrix(y_test, predictions, 1)
 metrics.plot_confusion_matrix(cm, "random_forest")
 
+metrics.plot_accuracy_over_testing_percentage(X, y, runs=5)
