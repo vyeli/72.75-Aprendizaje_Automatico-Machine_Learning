@@ -45,6 +45,9 @@ class DecisionTree:
 
         self.total_nodes += 1
         return Node(best_feature, best_threshold, left, right)
+    
+    def get_Total_nodes(self):
+        return self.total_nodes
 
     def _best_split(self, X, y, feat_idxs):
         best_gain = -1
