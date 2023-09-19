@@ -45,6 +45,9 @@ non_weighted_accuracies_err = []
 weighted_accuracies_mean = []
 weighted_accuracies_err = []
 
+weighted_accuracy = []
+non_weighted_accuracy = []
+
 for percentage in split_percentages:
     train_non_weighted_accuracies = []
     non_weighted_accuracies = []
@@ -72,6 +75,9 @@ for percentage in split_percentages:
         accuracy = np.sum(y_pred == y_test) / len(y_test)
         non_weighted_accuracies.append(accuracy)
 
+        if percentage == 0.4:
+            non_weighted_accuracy.append(accuracy)
+
         y_pred_train = no_weight_knn.predict(train_set, train_set, y_train)
         accuracy = np.sum(y_pred_train == y_train) / len(y_train)
         train_non_weighted_accuracies.append(accuracy)
@@ -81,6 +87,9 @@ for percentage in split_percentages:
         y_pred = weighted_knn.predict(test_set, train_set, y_train)
         accuracy = np.sum(y_pred == y_test) / len(y_test)
         weighted_accuracies.append(accuracy)
+
+        if percentage == 0.4:
+            weighted_accuracy.append(accuracy)
 
         y_pred_train = weighted_knn.predict(train_set, train_set, y_train)
         accuracy = np.sum(y_pred_train == y_train) / len(y_train)
@@ -118,3 +127,10 @@ plt.title("Weighted split")
 plt.legend()
 plt.savefig("Output/ex2/weighted_test_train_split.png")
 plt.show()
+
+print("Non weighted accuracy")
+print(f"\tvalue:{np.mean(non_weighted_accuracy)}")
+print(f"\tstd:{np.std(non_weighted_accuracy)}")
+print("Weighted accuracy")
+print(f"\tvalue:{np.mean(weighted_accuracy)}")
+print(f"\tstd:{np.std(weighted_accuracy)}")

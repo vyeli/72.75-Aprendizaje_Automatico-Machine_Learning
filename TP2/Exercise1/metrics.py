@@ -1,5 +1,7 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
+
 from sklearn.model_selection import train_test_split
 from RandomForest import RandomForest
 
@@ -64,35 +66,69 @@ class MetricsCalculator:
             plt.clf()
     
     def plot_accuracy_over_testing_percentage(self, X, y, runs = 3):
-        train_percentages = [10, 20, 30, 40, 50, 60, 70, 80, 90]
-        accuracy_df= []
-        accuracy_rf = []
+        test_percentages = [10 * i for i in range(1, 10)]
+        
+        test_accuracies_dt_mean = []
+        test_accuracies_rf_mean = []
 
-        for train_percentage in train_percentages:
-            accuracy_average_dt = 0
-            accuracy_average_rf = 0
+        test_accuracies_dt_std = []
+        test_accuracies_rf_std = []
+
+        train_accuracies_dt_mean = []
+        train_accuracies_rf_mean = []
+
+        train_accuracies_dt_std = []
+        train_accuracies_rf_std = []
+
+        for test_percentage in test_percentages:
+            test_accuracies_dt = []
+            test_accuracies_rf = []
+
+            train_accuracies_dt = []
+            train_accuracies_rf = []
+
             for _ in range(runs):
-                X_train, X_test, y_train, y_test = train_test_split(X, y, test_size= train_percentage/100, random_state=42)
+                X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=test_percentage/100)
                 decision_tree = DecisionTree()
                 random_forest = RandomForest()
                 decision_tree.fit(X_train, y_train)
                 random_forest.fit(X_train, y_train)
                 predictions_rf = random_forest.predict(X_test)
                 predictions_dt = decision_tree.predict(X_test)
-                accuracy_average_dt += self.accuracy(y_test, predictions_dt)
-                accuracy_average_rf += self.accuracy(y_test, predictions_rf)
 
-            accuracy_df.append(accuracy_average_dt/runs)
-            accuracy_rf.append(accuracy_average_rf/runs)
+                test_accuracies_dt.append(self.accuracy(y_test, predictions_dt))
+                test_accuracies_rf.append(self.accuracy(y_test, predictions_rf))
 
-        plt.plot(train_percentages, accuracy_df, label="Decision tree")
-        plt.plot(train_percentages, accuracy_rf, label="Random forest")
+                train_accuracies_dt.append(self.accuracy(y_train, decision_tree.predict(X_train)))
+                train_accuracies_rf.append(self.accuracy(y_train, random_forest.predict(X_train)))
+
+            test_accuracies_dt_mean.append(np.mean(test_accuracies_dt))
+            test_accuracies_dt_std.append(np.std(test_accuracies_dt))
+
+            train_accuracies_dt_mean.append(np.mean(train_accuracies_dt))
+            train_accuracies_dt_std.append(np.std(train_accuracies_dt))
+
+            test_accuracies_rf_mean.append(np.mean(test_accuracies_rf))
+            test_accuracies_rf_std.append(np.std(test_accuracies_rf))
+
+            train_accuracies_rf_mean.append(np.mean(train_accuracies_rf))
+            train_accuracies_rf_std.append(np.std(train_accuracies_rf))
+
+        plt.errorbar(test_percentages, test_accuracies_dt_mean, yerr=test_accuracies_dt_std, label="Test", marker='o', linestyle="dashed")
+        plt.errorbar(test_percentages, train_accuracies_dt_mean, yerr=train_accuracies_dt_std, label="Train", marker='o', linestyle="dashed")
         plt.legend()
-        plt.xlabel("Training percentage (%)")
+        plt.xlabel("Testing percentage (%)")
         plt.ylabel("Accuracy")
-        plt.savefig("Output/ex1/decision_tree/accuracy_over_training_percentage.png")
-        plt.clf()  
-        
+        plt.savefig("Output/ex1/decision_tree/test_train_split.png")
+        plt.clf()
+
+        plt.errorbar(test_percentages, test_accuracies_rf_mean, yerr=test_accuracies_rf_std, label="Test", marker='o', linestyle="dashed")
+        plt.errorbar(test_percentages, train_accuracies_rf_mean, yerr=train_accuracies_rf_std, label="Train", marker='o', linestyle="dashed")
+        plt.legend()
+        plt.xlabel("Testing percentage (%)")
+        plt.ylabel("Accuracy")
+        plt.savefig("Output/ex1/random_forest/test_train_split.png")
+        plt.clf()
 
 
     def precision(self, y_test, y_pred, desired_value):
