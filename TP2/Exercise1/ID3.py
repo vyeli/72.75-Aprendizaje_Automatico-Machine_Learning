@@ -17,6 +17,7 @@ class DecisionTree:
         self.min_samples_split = min_samples_split
         self.max_depth = max_depth
         self.n_features = n_features
+        self.total_nodes = 0
         self.root = None
     
     def fit(self, X, y):
@@ -30,6 +31,7 @@ class DecisionTree:
         # check the stopping criteria
         if(depth >= self.max_depth or n_labels == 1 or n_samples < self.min_samples_split):
             leaf_value = self._most_common_label(y)
+            self.total_nodes += 1
             return Node(value = leaf_value)
 
         feat_idxs = np.random.choice(n_features, size=self.n_features, replace = False)
@@ -41,6 +43,7 @@ class DecisionTree:
         left = self._grow_tree(X[left_idxs, :], y[left_idxs], depth + 1)
         right = self._grow_tree(X[right_idxs, :], y[right_idxs], depth + 1)
 
+        self.total_nodes += 1
         return Node(best_feature, best_threshold, left, right)
 
     def _best_split(self, X, y, feat_idxs):
