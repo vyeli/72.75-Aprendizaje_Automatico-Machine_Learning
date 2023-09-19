@@ -4,7 +4,7 @@ import numpy as np
 import seaborn as sns
 import os
 
-from utils import confusion_matrix
+from sklearn.metrics import confusion_matrix
 
 # Create the output folder if it doesn't exist
 if not os.path.exists("Output/ex2"):
@@ -92,16 +92,39 @@ print(f"The accuracy of the no-weighted knn classifier is {accuracy:.2f}")
 
 # Calculate the confusion matrix for the KNN classifier
 
-labels = np.unique(y_test)
-cm = confusion_matrix(y_test, y_pred, labels)
+labels = np.unique(np.concatenate((y_test, y_pred)))
+cm = confusion_matrix(y_test, y_pred)
 
 # Plot the confusion matrix
+def plot_confusion_matrix(cm, labels, title="Confusion matrix", cmap=plt.cm.Blues, weight=False):
+        plt.imshow(cm, cmap="YlOrRd")
+        plt.colorbar()
+        tick_marks = np.arange(len(labels))
+        plt.xticks(tick_marks, labels)
+        plt.yticks(tick_marks, labels)
 
-sns.heatmap(cm, annot=True, fmt="d", xticklabels=labels, yticklabels=labels, cmap="YlOrRd")
-plt.title("Confusion matrix of the no-weighted knn classifier")
-plt.xlabel("Predicted label")
-plt.ylabel("True label")
-plt.savefig("Output/ex2/confusion_matrix_no_weighted.png")
+        cm_norm = np.around(cm.astype('float') / np.sum(cm), decimals=4)
+
+        for i, j in np.ndindex(cm.shape):
+            count = cm[i, j]
+            percent = cm_norm[i, j] * 100
+            plt.text(j, i, f"{count:.0f}",
+                 horizontalalignment="center",
+                 verticalalignment="center",
+                 color="white" if cm_norm[i, j] > 0.4 else "black")
+            plt.text(j, i+0.3, f"{percent:.1f}%",
+                 horizontalalignment="center",
+                 verticalalignment="center",
+                 color="white" if cm_norm[i, j] > 0.4 else "black")
+        
+        plt.title(title + (" (weighted)" if weight else "no weighted"))
+        plt.xlabel("Predicted label")
+        plt.ylabel("True label")
+        plt.savefig("Output/ex2/confusion_matrix" + ("_weighted" if weight else "_no_weighted") + ".png")
+
+fig = plt.figure()            
+plot_confusion_matrix(cm, labels)
+
 
 # Predict the labels of the test set using the weighted knn classifier
 weighted_knn = KNN(k=5, weighted=True)
@@ -118,13 +141,10 @@ print(f"The accuracy of the weighted knn classifier is {accuracy:.2f}")
 labels = np.unique(y_test)
 
 
-cm = confusion_matrix(y_test, y_pred, labels)
+cm = confusion_matrix(y_test, y_pred)
 
 # Plot the confusion matrix
-sns.heatmap(cm, annot=True, fmt="d", xticklabels=labels, yticklabels=labels, cmap="YlOrRd")
-plt.title("Confusion matrix of the weighted knn classifier")
-plt.xlabel("Predicted label")
-plt.ylabel("True label")
-plt.savefig("Output/ex2/confusion_matrix_weighted.png")
+fig = plt.figure()
+plot_confusion_matrix(cm, labels, weight=True)
 
 
