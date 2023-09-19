@@ -1,4 +1,5 @@
 import numpy as np
+from functools import total_ordering
 
 def confusion_matrix(y_true, y_pred, labels):
     cm = np.zeros((len(labels), len(labels)), dtype=int)
@@ -12,3 +13,14 @@ def confusion_matrix(y_true, y_pred, labels):
     
     return cm
 
+@total_ordering
+class Distance():
+    def __init__(self, distance, index):
+        self.distance = distance
+        self.index = index
+    
+    def __eq__(self, other):
+        return self.distance == other.distance
+    
+    def __lt__(self, other):
+        return self.distance < other.distance
