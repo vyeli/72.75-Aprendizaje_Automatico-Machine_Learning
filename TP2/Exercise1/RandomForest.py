@@ -33,4 +33,10 @@ class RandomForest:
         tree_preds = np.swapaxes(predictions, 0, 1)
         predictions = np.array([self._most_common_label(tree_pred) for tree_pred in tree_preds])
         return predictions
+    
+    def get_Total_nodes(self):
+        return sum([tree.get_Total_nodes() for tree in self.trees])
+    
+    def get_mean_nodes_per_tree(self):
+        return self.get_Total_nodes() / self.n_trees
 
