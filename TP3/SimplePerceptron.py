@@ -19,8 +19,9 @@ class SimplePerceptron:
         self.weights = np.zeros(n_features)
         self.bias = 0
 
-        y_ = np.array([1 if i > 0 else 0 for i in y])
+        y_ = np.where(y > 0, 1, 0)
 
+        # learning
         for _ in range(self.n_iters):
             for idx, x_i in enumerate(X):
                 linear_output = np.dot(x_i, self.weights) + self.bias
