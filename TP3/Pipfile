@@ -8,6 +8,7 @@ numpy = "*"
 pandas = "*"
 matplotlib = "*"
 scikit-learn = "*"
+opencv-python = "*"
 
 [dev-packages]
 
