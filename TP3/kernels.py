@@ -19,4 +19,5 @@ class RadialKernel:
         self.sigma = sigma
 
     def __call__(self, x, support_vectors):
-        return np.exp(-np.linalg.norm(x - support_vectors, axis=1)**2 / (2 * self.sigma**2))
+        return np.exp(-self.sigma * np.sum([(x - support_vector)**2 for support_vector in support_vectors]))
+
