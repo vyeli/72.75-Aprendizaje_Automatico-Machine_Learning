@@ -118,7 +118,7 @@ class MetricsCalculator:
         plt.errorbar(test_percentages, train_accuracies_dt_mean, yerr=train_accuracies_dt_std, label="Train", marker='o', linestyle="dashed")
         plt.legend()
         plt.xlabel("Testing percentage (%)")
-        plt.ylabel("Accuracy")
+        plt.ylabel("Precision")
         plt.savefig("Output/ex1/decision_tree/test_train_split.png")
         plt.clf()
 
@@ -126,7 +126,7 @@ class MetricsCalculator:
         plt.errorbar(test_percentages, train_accuracies_rf_mean, yerr=train_accuracies_rf_std, label="Train", marker='o', linestyle="dashed")
         plt.legend()
         plt.xlabel("Testing percentage (%)")
-        plt.ylabel("Accuracy")
+        plt.ylabel("Precision")
         plt.savefig("Output/ex1/random_forest/test_train_split.png")
         plt.clf()
 
