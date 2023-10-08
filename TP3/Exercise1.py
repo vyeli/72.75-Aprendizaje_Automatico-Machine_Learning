@@ -11,6 +11,7 @@ if not os.path.exists("Output/ex1"):
     os.makedirs("Output/ex1/")
 
 # Generates linearly separable data 
+# REMEMBER THE RANDOMSTATE USED TO RECREATE THE IMAGE
 def generate_linearly_separable_data(n_samples):
     X, y = datasets.make_blobs(n_samples=n_samples, n_features=2, centers=2, cluster_std=1.05, random_state=42)
     return X, y
@@ -69,3 +70,11 @@ ax.plot([x0_1, x0_2], [x1_1, x1_2], 'k')
 
 plt.savefig("Output/ex1/decision_boundary.png")
 plt.show()
+
+# Obtain the hyperplane that maximaze the margin base on the decision boundary of the perceptron
+# Choose possibles support vectors
+
+distances = np.abs((np.dot(X, perceptron.weights) + perceptron.bias) / np.linalg.norm(perceptron.weights))
+support_vector_indices = np.where(distances == min(distances))
+support_vectors = X[support_vector_indices]
+
