@@ -2,6 +2,7 @@ import numpy as np
 import cv2
 import csv
 import time
+import threading
 
 from sklearn.svm import SVC
 from sklearn.metrics import accuracy_score, confusion_matrix
@@ -39,22 +40,20 @@ def get_SVM(kernel, C=1000, degree=10, gamma='auto'):
         case _:     # Default to linear
             return SVC(C=C, kernel=kernel)
 
-
 def run_SVM(svm, writer, sets, set_names, test_size):
     start = time.time()
     tp, fp, fn, tn = svm_train_test(sets[0], sets[1], test_size, svm)
     end = time.time()
     writer.writerow([set_names[0], set_names[1], end - start, tp, fp, fn, tn])
-    print(f'Finish {set_names[0]} vs {set_names[1]} {i}')
+    print(f'Finish {set_names[0]} vs {set_names[1]} {i}: {end - start}s')
 
-csv_output = 'output/poly_kernel.csv'
+csv_output = 'output/mixed_kernel_.csv'
 images_folder = "imagenes/"
 
 # imread returns RGB colors
 cow_image = cv2.imread(images_folder + "vaca.jpg").reshape(-1, 3)
 sky_image = cv2.imread(images_folder + "cielo.jpg").reshape(-1, 3)
 grass_image = cv2.imread(images_folder + "pasto.jpg").reshape(-1, 3)
-
 
 with open(csv_output, 'w', newline='') as csvfile:
     writer = csv.writer(csvfile, delimiter=',', quotechar='"', quoting=csv.QUOTE_MINIMAL)
@@ -63,18 +62,20 @@ with open(csv_output, 'w', newline='') as csvfile:
 
     # Choose parameters
     test_size = 0.2
-    kernel = 'poly'
-    degrees = [2, 3, 4, 5]
-    C = 1000
+    kernel = 'rbf'
+    C_linear = 5
+    C_radial = 20
     runs = 10
 
+    # Sweet spots
+    # Linear: C=5
+    # RBF (cow vs grass): C=20
     for i in range(runs):
-        for degree in degrees:
-            _svm = get_SVM(kernel, C, degree)
-            run_SVM(_svm, writer, [sky_image, cow_image], ['sky', 'cow'], test_size)
+        _svm = get_SVM('linear', C_linear)
+        run_SVM(_svm, writer, [sky_image, cow_image], ['sky', 'cow'], test_size)
 
-            _svm = get_SVM(kernel, C, degree)
-            run_SVM(_svm, writer, [sky_image, grass_image], ['sky', 'grass'], test_size)
+        _svm = get_SVM('linear', C_linear)
+        run_SVM(_svm, writer, [sky_image, grass_image], ['sky', 'grass'], test_size)
 
-            # _svm = get_SVM(kernel, C, degree)
-            # run_SVM(_svm, writer, [grass_image, cow_image], ['grass', 'cow'], test_size)
+        _svm = get_SVM('rbf', C_radial)
+        run_SVM(_svm, writer, [grass_image, cow_image], ['grass', 'cow'], test_size)
