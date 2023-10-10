@@ -68,8 +68,8 @@ def plot_decision_boundary(X, y, w1, w2, b):
     ymax = np.amax(X[:, 1])
     ax.set_ylim([ymin-3, ymax+3])
 
-    ax.plot([x0_1, x0_2], [x1_1, x1_2], 'k')
-
+    ax.plot([x0_1, x0_2], [x1_1, x1_2], 'k', label="Perceptron Decision Boundary")
+    plt.legend()
     plt.savefig("Output/ex1/decision_boundary.png")
     plt.show()
 
@@ -135,14 +135,25 @@ ymin = np.amin(X[:, 1])
 ymax = np.amax(X[:, 1])
 ax.set_ylim([ymin-3, ymax+3])
 
-ax.plot([x0_1, x0_2], [x1_1 - margin, x1_2 - margin], 'k')
+ax.plot([x0_1, x0_2], [x1_1 - margin, x1_2 - margin], 'b', label="Optimal line with margin")
 
 # Plot the margin lines
 
-ax.plot([x0_1, x0_2], [x1_1, x1_2], 'k--')
+ax.plot([x0_1, x0_2], [x1_1, x1_2], 'b--')
 
-ax.plot([x0_1, x0_2], [x1_1 - max_margin, x1_2 - max_margin], 'k--')
+ax.plot([x0_1, x0_2], [x1_1 - max_margin, x1_2 - max_margin], 'b--')
 
+# plot old decision boundary
+
+x1_1 = (-perceptron.weights[0] * x0_1 - perceptron.bias) / perceptron.weights[1]
+x1_2 = (-perceptron.weights[0] * x0_2 - perceptron.bias) / perceptron.weights[1]
+
+ax.plot([x0_1, x0_2], [x1_1, x1_2], 'r', label="Perceptron")
+
+plt.title("Best line with its margin")
+plt.xlabel("X")
+plt.ylabel("Y")
+plt.legend()
 plt.savefig("Output/ex1/best_line.png")
 plt.show()
 
