@@ -4,9 +4,9 @@ import numpy as np
 import cv2
 
 # Generar datos de ejemplo para tres conjuntos
-set1 = cv2.imread('../imagenes_2/vaca.jpg').reshape(-1, 3)  # Conjunto 1
-set2 = cv2.imread('../imagenes_2/pasto.jpg').reshape(-1, 3)  # Conjunto 2
-set3 = cv2.imread('../imagenes_2/cielo.jpg').reshape(-1, 3)  # Conjunto 3
+set1 = cv2.imread('../imagenes/vaca.jpg').reshape(-1, 3)  # Conjunto 1
+set2 = cv2.imread('../imagenes/pasto.jpg').reshape(-1, 3)  # Conjunto 2
+set3 = cv2.imread('../imagenes/cielo.jpg').reshape(-1, 3)  # Conjunto 3
 
 set1 = set1[:set1.shape[0] // 10]
 set2 = set2[:set2.shape[0] // 10]
