@@ -47,6 +47,12 @@ def run_SVM(svm, writer, sets, set_names, test_size):
     writer.writerow([set_names[0], set_names[1], end - start, tp, fp, fn, tn])
     print(f'Finish {set_names[0]} vs {set_names[1]} {i}: {end - start}s')
 
+import os
+
+# Create output folder
+if not os.path.exists('output'):
+    os.makedirs('output')
+
 csv_output = 'output/mixed_kernel_.csv'
 images_folder = "imagenes/"
 
