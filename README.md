@@ -21,7 +21,7 @@ El repositorio se organiza en carpetas separadas, una para cada trabajo práctic
 3. [TP3 - Algoritmos de Vectores de Soporte](/TP3)
    - El tercer trabajo práctico se centra en SVM y perceptron simple para la clasificación de datos
 
-4. [TP4 - Algoritmos de Vectores de Soporte](/tp4)
+4. [TP4 - Algoritmos de Vectores de Soporte](/TP4)
   - En este trabajo se trata de aprendizaje no supervisado, utilizando métodos de aprendizaje no supervisado k-medias, Agrupaciónjerárquica y Red de Kohonen
 
 
