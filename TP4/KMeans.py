@@ -77,7 +77,8 @@ class KMeans:
         return closest_idx
     
     def _euclidean_distance(self, x1, x2):
-        return np.sqrt(np.sum((x1 - x2)**2)) #to be modified
+        return np.linalg.norm(x1 - x2)
+        # return np.sqrt(np.sum((x1 - x2)**2)) #to be modified
     
     def _get_cluster_labels(self, clusters):
         labels = np.empty(self.n_samples)
@@ -86,3 +87,14 @@ class KMeans:
             for sample_idx in cluster:
                 labels[sample_idx] = cluster_idx
         return labels
+
+    # calculate the sum of squared error (SSE) for each cluster divided by the number of samples in each cluster
+    def inertia(self):
+        inertia = 0
+        for cluster_idx, cluster in enumerate(self.clusters):
+            cluster_error = 0
+            for sample_idx in cluster:
+                cluster_error += self._euclidean_distance(self.X[sample_idx], self.centroids[cluster_idx])
+            inertia += cluster_error/len(cluster)
+        return inertia
+    
