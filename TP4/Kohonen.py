@@ -11,6 +11,8 @@ class Kohonen:
         self.current_iteration = 0
         self.random_seed = random_seed
         
+        if self.random_seed is not None:
+            np.random.seed(self.random_seed)
         self.weights = np.random.rand(map_size[0], map_size[1], n_features)
         
     def _get_bmu(self, sample):
@@ -31,10 +33,7 @@ class Kohonen:
         delta = lr * neighborhood[:, :, np.newaxis] * (sample - self.weights)
         self.weights += delta
         
-    def fit(self, X):
-        if self.random_seed is not None:
-            np.random.seed(self.random_seed)
-        
+    def fit(self, X):        
         for i in range(self.n_iterations):
             lr = self.learning_rate * np.exp(-i / self.n_iterations)
             for sample in X:
@@ -73,6 +72,6 @@ class Kohonen:
                 else:
                     u_matrix[i*2, j*2] = np.mean(np.sqrt(np.sum((self.weights[i, j] - self.weights[i-1:i+2, j-1:j+2])**2)))
         
-        plt.imshow(u_matrix, cmap='gray')
-        plt.axis('off')
+        plt.imshow(u_matrix, cmap='YlOrRd')
+        plt.colorbar()
         plt.show()
