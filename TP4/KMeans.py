@@ -88,15 +88,14 @@ class KMeans:
                 labels[sample_idx] = cluster_idx
         return labels
 
-    # calculate the sum of squared error (SSE) for each cluster divided by the number of samples in each cluster
     def inertia(self):
         inertia = 0
         for cluster_idx, cluster in enumerate(self.clusters):
             centroid = self.centroids[cluster_idx]
-            inertia += np.sum(np.linalg.norm(self.X[cluster] - centroid) ** 2)
+            inertia += np.sum(np.linalg.norm(self.X[cluster] - centroid) ** 2) / len(cluster)
         return inertia
     
-    def plot_elbow_method(data, min=3, max=20):
+    def plot_elbow_method(data, min=3, max=20, output_file='output.png'):
         sse = []
         for k in range (min, max):
             kmeans = KMeans(K=k, max_iters=300)
@@ -105,6 +104,7 @@ class KMeans:
         
         plt.plot(range(min, max), sse)
         plt.xticks(range(min, max))
-        plt.xlabel("Number of Clusters")
-        plt.ylabel("Inertia")
+        plt.xlabel("Cantidad de clusters")
+        plt.ylabel("WCSS")
+        plt.savefig(output_file)
         plt.show()
