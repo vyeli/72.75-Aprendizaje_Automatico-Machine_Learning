@@ -92,9 +92,19 @@ class KMeans:
     def inertia(self):
         inertia = 0
         for cluster_idx, cluster in enumerate(self.clusters):
-            cluster_error = 0
-            for sample_idx in cluster:
-                cluster_error += self._euclidean_distance(self.X[sample_idx], self.centroids[cluster_idx])
-            inertia += cluster_error/len(cluster)
+            centroid = self.centroids[cluster_idx]
+            inertia += np.sum(np.linalg.norm(self.X[cluster] - centroid) ** 2)
         return inertia
     
+    def plot_elbow_method(data, min=3, max=20):
+        sse = []
+        for k in range (min, max):
+            kmeans = KMeans(K=k, max_iters=300)
+            kmeans.predict(data)
+            sse.append(kmeans.inertia())
+        
+        plt.plot(range(min, max), sse)
+        plt.xticks(range(min, max))
+        plt.xlabel("Number of Clusters")
+        plt.ylabel("Inertia")
+        plt.show()

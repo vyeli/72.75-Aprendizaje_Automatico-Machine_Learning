@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "44576d4d255f44bfeb0e9abb3e9afdd541a8ba77d4eae3500e33a5067ff3d240"
+            "sha256": "15f23c9ae79c81acc52890055657d2f2f7859f7389f90b3d1162d5d9ace218c4"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -1784,6 +1784,14 @@
             ],
             "markers": "python_version >= '3.7'",
             "version": "==4.0.9"
+        },
+        "yellowbrick": {
+            "hashes": [
+                "sha256:4bb2895cecf94a0e736398bbac6c5d72032ba3ff2273f49df660b14ef419305d",
+                "sha256:99a6336dd2e7ce586a8cde67966b79c51b479d3759f3c083d7e19ffe949f6076"
+            ],
+            "index": "pypi",
+            "version": "==1.5"
         }
     },
     "develop": {}

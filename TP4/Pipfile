@@ -12,6 +12,7 @@ seaborn = "*"
 jupyter = "*"
 scipy = "*"
 minisom = "*"
+yellowbrick = "*"
 
 [dev-packages]
 
