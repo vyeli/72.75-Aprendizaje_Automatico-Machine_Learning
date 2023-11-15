@@ -52,3 +52,14 @@ class Kohonen:
                 distance_map[i, j] = np.sqrt(np.mean(distances))
 
         return distance_map
+    
+    def distance_map_feature(self, feature_index):
+        # compute the distance map for the specified feature index
+        distance_map = np.zeros((self.n_rows, self.n_cols))
+        for i in range(self.n_rows):
+            for j in range(self.n_cols):
+                w = self.weights[i, j, feature_index]
+                distances = np.sum((self.weights[:, :, feature_index] - w) ** 2, axis=0)
+                distance_map[i, j] = np.sqrt(np.mean(distances))
+
+        return distance_map
