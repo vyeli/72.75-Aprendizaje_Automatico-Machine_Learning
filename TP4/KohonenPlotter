@@ -1,0 +1,22 @@
+import matplotlib.pyplot as plt
+
+class KohonenPlotter:
+
+    def use_one_hot_encoding(self, df, column="overview"):
+        df = df.join(df[column].str.get_dummies(sep=" "))
+        df = df.drop([column], axis=1)
+        return df
+
+    def drop_columns(self, df):
+        df = df.drop(['genres', 'original_title', 'overview', 'imdb_id', 'release_date'], axis=1)
+        return df
+    
+    def normalize_data(self, df):
+        normalized_df = (df-df.min())/(df.max()-df.min())
+        return normalized_df
+    
+    def plot_u_matrix(self, som):
+        distance_map = som.distance_map()
+        plt.imshow(distance_map, cmap='YlOrRd')
+        plt.colorbar()
+        plt.show()
