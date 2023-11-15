@@ -1,32 +1,29 @@
-from sklearn.datasets import make_blobs
+import pandas as pd
 import numpy as np
-from KMeans import KMeans
-from sklearn.datasets import load_iris
+import matplotlib.pyplot as plt
 from Kohonen import Kohonen
 
-np.random.seed(42)
+# cargar el dataset en un DataFrame
+df = pd.read_csv('data/movie_data.csv', sep=";").dropna()
+normalized_df = df
+normalized_df = normalized_df.drop(['genres', 'original_title', 'overview', 'imdb_id', 'release_date'], axis=1)
+normalized_df = (normalized_df-normalized_df.min())/(normalized_df.max()-normalized_df.min())
 
-X, y = make_blobs(centers=3, n_samples=500, n_features=2, shuffle=True, random_state=40)
 
-print(X.shape)
+# convertir el DataFrame a un array NumPy
+data = normalized_df.values
 
-clusters = len(np.unique(y))
-print(clusters)
+# create a SOM
+som = Kohonen(20, 20, data.shape[1])
 
-k = KMeans(K=clusters, max_iters=150, plot_steps=True)
-y_pred = k.predict(X)
+# train the SOM on the dataset for 1000 iterations
+som.train(data, 100000)
 
-k.plot()
+# compute the distance map of the SOM
+distance_map = som.distance_map()
 
-# Load the Iris dataset
-iris = load_iris()
-X = iris.data
+# visualize the distance map
+plt.imshow(distance_map, cmap='YlOrRd')
+plt.colorbar()
+plt.show()
 
-# Normalize the data
-X = (X - np.mean(X, axis=0)) / np.std(X, axis=0)
-
-# Train the Kohonen network
-kohonen = Kohonen(map_size=(15, 15), n_features=X.shape[1], n_iterations=5000, random_seed=40)
-kohonen.fit(X)
-
-kohonen.plot_u_matrix()
