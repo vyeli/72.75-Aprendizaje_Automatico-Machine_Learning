@@ -3,6 +3,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import sklearn as sk
+import xgboost as xgb
 
 # load data
 conn = sqlite3.connect('./Data/database.sqlite')
@@ -22,5 +23,14 @@ selected_countries = ['England','France','Germany','Italy','Spain']
 countries = countries[countries.name.isin(selected_countries)]
 leagues = leagues[leagues.country_id.isin(countries.id)]
 
+# filter the matches table to only include the top 5 leagues
+matches = matches[matches.league_id.isin(leagues.id)]
+
+# drop na
+matches = matches.dropna()
+
+
 # create a new column for the match table to indicate the winner (1 for home team, 2 for away team, 0 for draw)
 matches["winner"] = np.where(matches["home_team_goal"] > matches["away_team_goal"], 1, np.where(matches["home_team_goal"] < matches["away_team_goal"], 2, 0))
+
+
