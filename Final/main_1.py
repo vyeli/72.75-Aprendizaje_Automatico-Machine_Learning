@@ -117,7 +117,7 @@ for train_index, test_index in sss.split(X, y):
 gb_clf = XGBClassifier(n_estimators=500, learning_rate=0.001, max_depth=5, objective='multi:softmax')
 gb_clf.fit(X_train, y_train)
 
-# # make predictions
+# make predictions
 y_pred = gb_clf.predict(X_test)
 
 # evaluate model performance

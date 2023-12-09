@@ -1,0 +1,381 @@
+FTHG,FTAG,Date,season,HomeTeam,AwayTeam,FTR
+2,1,16-08-2008,2008/2009,Middlesbrough,Tottenham Hotspur,H
+2,3,16-08-2008,2008/2009,Everton,Blackburn Rovers,A
+0,1,16-08-2008,2008/2009,Sunderland,Liverpool,A
+2,1,16-08-2008,2008/2009,Hull City,Fulham,H
+2,1,16-08-2008,2008/2009,West Ham United,Wigan Athletic,H
+3,1,16-08-2008,2008/2009,Bolton Wanderers,Stoke City,H
+1,0,16-08-2008,2008/2009,Arsenal,West Bromwich Albion,H
+4,0,17-08-2008,2008/2009,Chelsea,Portsmouth,H
+4,2,17-08-2008,2008/2009,Aston Villa,Manchester City,H
+1,1,17-08-2008,2008/2009,Manchester United,Newcastle United,D
+1,0,23-08-2008,2008/2009,Newcastle United,Bolton Wanderers,H
+1,2,23-08-2008,2008/2009,West Bromwich Albion,Everton,A
+1,0,23-08-2008,2008/2009,Fulham,Arsenal,H
+3,2,23-08-2008,2008/2009,Stoke City,Aston Villa,H
+1,2,23-08-2008,2008/2009,Tottenham Hotspur,Sunderland,A
+2,1,23-08-2008,2008/2009,Liverpool,Middlesbrough,H
+1,1,23-08-2008,2008/2009,Blackburn Rovers,Hull City,D
+0,1,24-08-2008,2008/2009,Wigan Athletic,Chelsea,A
+3,0,24-08-2008,2008/2009,Manchester City,West Ham United,H
+0,1,25-08-2008,2008/2009,Portsmouth,Manchester United,A
+0,3,30-08-2008,2008/2009,Everton,Portsmouth,A
+0,0,30-08-2008,2008/2009,Bolton Wanderers,West Bromwich Albion,D
+2,1,30-08-2008,2008/2009,Middlesbrough,Stoke City,H
+3,0,30-08-2008,2008/2009,Arsenal,Newcastle United,H
+4,1,30-08-2008,2008/2009,West Ham United,Blackburn Rovers,H
+0,5,30-08-2008,2008/2009,Hull City,Wigan Athletic,A
+0,3,31-08-2008,2008/2009,Sunderland,Manchester City,A
+1,1,31-08-2008,2008/2009,Chelsea,Tottenham Hotspur,D
+0,0,31-08-2008,2008/2009,Aston Villa,Liverpool,D
+1,2,13-09-2008,2008/2009,Newcastle United,Hull City,A
+1,1,13-09-2008,2008/2009,Wigan Athletic,Sunderland,D
+0,4,13-09-2008,2008/2009,Blackburn Rovers,Arsenal,A
+2,1,13-09-2008,2008/2009,Portsmouth,Middlesbrough,H
+2,1,13-09-2008,2008/2009,Liverpool,Manchester United,H
+2,1,13-09-2008,2008/2009,Fulham,Bolton Wanderers,H
+1,3,13-09-2008,2008/2009,Manchester City,Chelsea,A
+3,2,13-09-2008,2008/2009,West Bromwich Albion,West Ham United,H
+2,3,14-09-2008,2008/2009,Stoke City,Everton,A
+1,2,15-09-2008,2008/2009,Tottenham Hotspur,Aston Villa,A
+2,0,20-09-2008,2008/2009,Sunderland,Middlesbrough,H
+1,3,20-09-2008,2008/2009,Bolton Wanderers,Arsenal,A
+0,0,20-09-2008,2008/2009,Liverpool,Stoke City,D
+1,0,20-09-2008,2008/2009,Blackburn Rovers,Fulham,H
+3,1,20-09-2008,2008/2009,West Ham United,Newcastle United,H
+1,1,21-09-2008,2008/2009,Chelsea,Manchester United,D
+0,0,21-09-2008,2008/2009,Tottenham Hotspur,Wigan Athletic,D
+2,2,21-09-2008,2008/2009,Hull City,Everton,D
+6,0,21-09-2008,2008/2009,Manchester City,Portsmouth,H
+1,2,21-09-2008,2008/2009,West Bromwich Albion,Aston Villa,A
+0,2,27-09-2008,2008/2009,Stoke City,Chelsea,A
+1,2,27-09-2008,2008/2009,Fulham,West Ham United,A
+1,2,27-09-2008,2008/2009,Newcastle United,Blackburn Rovers,A
+1,2,27-09-2008,2008/2009,Arsenal,Hull City,A
+0,1,27-09-2008,2008/2009,Middlesbrough,West Bromwich Albion,A
+2,1,27-09-2008,2008/2009,Aston Villa,Sunderland,H
+2,0,27-09-2008,2008/2009,Manchester United,Bolton Wanderers,H
+0,2,27-09-2008,2008/2009,Everton,Liverpool,A
+2,0,28-09-2008,2008/2009,Portsmouth,Tottenham Hotspur,H
+2,1,28-09-2008,2008/2009,Wigan Athletic,Manchester City,H
+1,0,04-10-2008,2008/2009,West Bromwich Albion,Fulham,H
+1,1,04-10-2008,2008/2009,Sunderland,Arsenal,D
+0,1,04-10-2008,2008/2009,Wigan Athletic,Middlesbrough,A
+0,2,04-10-2008,2008/2009,Blackburn Rovers,Manchester United,A
+2,1,05-10-2008,2008/2009,Portsmouth,Stoke City,H
+1,3,05-10-2008,2008/2009,West Ham United,Bolton Wanderers,A
+0,1,05-10-2008,2008/2009,Tottenham Hotspur,Hull City,A
+2,0,05-10-2008,2008/2009,Chelsea,Aston Villa,H
+2,2,05-10-2008,2008/2009,Everton,Newcastle United,D
+2,3,05-10-2008,2008/2009,Manchester City,Liverpool,A
+0,0,18-10-2008,2008/2009,Aston Villa,Portsmouth,D
+4,0,18-10-2008,2008/2009,Manchester United,West Bromwich Albion,H
+0,5,18-10-2008,2008/2009,Middlesbrough,Chelsea,A
+3,2,18-10-2008,2008/2009,Liverpool,Wigan Athletic,H
+0,0,18-10-2008,2008/2009,Bolton Wanderers,Blackburn Rovers,D
+3,1,18-10-2008,2008/2009,Arsenal,Everton,H
+0,0,18-10-2008,2008/2009,Fulham,Sunderland,D
+1,0,19-10-2008,2008/2009,Hull City,West Ham United,H
+2,1,19-10-2008,2008/2009,Stoke City,Tottenham Hotspur,H
+2,2,20-10-2008,2008/2009,Newcastle United,Manchester City,D
+1,1,25-10-2008,2008/2009,Everton,Manchester United,D
+0,3,25-10-2008,2008/2009,West Bromwich Albion,Hull City,A
+1,1,25-10-2008,2008/2009,Blackburn Rovers,Middlesbrough,D
+2,1,25-10-2008,2008/2009,Sunderland,Newcastle United,H
+1,1,26-10-2008,2008/2009,Portsmouth,Fulham,D
+0,1,26-10-2008,2008/2009,Chelsea,Liverpool,A
+0,4,26-10-2008,2008/2009,Wigan Athletic,Aston Villa,A
+3,0,26-10-2008,2008/2009,Manchester City,Stoke City,H
+0,2,26-10-2008,2008/2009,West Ham United,Arsenal,A
+2,0,26-10-2008,2008/2009,Tottenham Hotspur,Bolton Wanderers,H
+2,1,28-10-2008,2008/2009,Newcastle United,West Bromwich Albion,H
+4,4,29-10-2008,2008/2009,Arsenal,Tottenham Hotspur,D
+2,0,29-10-2008,2008/2009,Middlesbrough,Manchester City,H
+1,0,29-10-2008,2008/2009,Stoke City,Sunderland,H
+1,0,29-10-2008,2008/2009,Liverpool,Portsmouth,H
+2,0,29-10-2008,2008/2009,Manchester United,West Ham United,H
+3,2,29-10-2008,2008/2009,Aston Villa,Blackburn Rovers,H
+0,1,29-10-2008,2008/2009,Bolton Wanderers,Everton,A
+0,3,29-10-2008,2008/2009,Hull City,Chelsea,A
+2,0,29-10-2008,2008/2009,Fulham,Wigan Athletic,H
+1,1,01-11-2008,2008/2009,Middlesbrough,West Ham United,D
+2,2,01-11-2008,2008/2009,West Bromwich Albion,Blackburn Rovers,D
+4,3,01-11-2008,2008/2009,Manchester United,Hull City,H
+2,1,01-11-2008,2008/2009,Tottenham Hotspur,Liverpool,H
+1,0,01-11-2008,2008/2009,Everton,Fulham,H
+1,2,01-11-2008,2008/2009,Portsmouth,Wigan Athletic,A
+2,1,01-11-2008,2008/2009,Stoke City,Arsenal,H
+5,0,01-11-2008,2008/2009,Chelsea,Sunderland,H
+2,0,02-11-2008,2008/2009,Bolton Wanderers,Manchester City,H
+2,0,03-11-2008,2008/2009,Newcastle United,Aston Villa,H
+1,2,08-11-2008,2008/2009,Sunderland,Portsmouth,A
+0,1,08-11-2008,2008/2009,Hull City,Bolton Wanderers,A
+3,0,08-11-2008,2008/2009,Liverpool,West Bromwich Albion,H
+1,3,08-11-2008,2008/2009,West Ham United,Everton,A
+2,1,08-11-2008,2008/2009,Arsenal,Manchester United,H
+0,0,08-11-2008,2008/2009,Wigan Athletic,Stoke City,D
+2,1,09-11-2008,2008/2009,Fulham,Newcastle United,H
+1,2,09-11-2008,2008/2009,Manchester City,Tottenham Hotspur,A
+1,2,09-11-2008,2008/2009,Aston Villa,Middlesbrough,A
+0,2,09-11-2008,2008/2009,Blackburn Rovers,Chelsea,A
+1,2,15-11-2008,2008/2009,Blackburn Rovers,Sunderland,A
+0,3,15-11-2008,2008/2009,West Bromwich Albion,Chelsea,A
+2,2,15-11-2008,2008/2009,Newcastle United,Wigan Athletic,D
+2,1,15-11-2008,2008/2009,Fulham,Tottenham Hotspur,H
+0,0,15-11-2008,2008/2009,West Ham United,Portsmouth,D
+5,0,15-11-2008,2008/2009,Manchester United,Stoke City,H
+0,2,15-11-2008,2008/2009,Arsenal,Aston Villa,A
+0,2,15-11-2008,2008/2009,Bolton Wanderers,Liverpool,A
+1,1,16-11-2008,2008/2009,Everton,Middlesbrough,D
+2,2,16-11-2008,2008/2009,Hull City,Manchester City,D
+1,0,22-11-2008,2008/2009,Stoke City,West Bromwich Albion,H
+0,0,22-11-2008,2008/2009,Liverpool,Fulham,D
+1,3,22-11-2008,2008/2009,Middlesbrough,Bolton Wanderers,A
+0,0,22-11-2008,2008/2009,Chelsea,Newcastle United,D
+3,0,22-11-2008,2008/2009,Manchester City,Arsenal,H
+2,2,22-11-2008,2008/2009,Portsmouth,Hull City,D
+0,0,22-11-2008,2008/2009,Aston Villa,Manchester United,D
+1,0,23-11-2008,2008/2009,Tottenham Hotspur,Blackburn Rovers,H
+0,1,23-11-2008,2008/2009,Sunderland,West Ham United,A
+1,0,24-11-2008,2008/2009,Wigan Athletic,Everton,H
+1,4,29-11-2008,2008/2009,Sunderland,Bolton Wanderers,A
+1,1,29-11-2008,2008/2009,Stoke City,Hull City,D
+0,0,29-11-2008,2008/2009,Middlesbrough,Newcastle United,D
+0,0,29-11-2008,2008/2009,Aston Villa,Fulham,D
+2,1,29-11-2008,2008/2009,Wigan Athletic,West Bromwich Albion,H
+0,1,30-11-2008,2008/2009,Tottenham Hotspur,Everton,A
+1,2,30-11-2008,2008/2009,Chelsea,Arsenal,A
+0,1,30-11-2008,2008/2009,Manchester City,Manchester United,A
+3,2,30-11-2008,2008/2009,Portsmouth,Blackburn Rovers,H
+0,0,01-12-2008,2008/2009,Liverpool,West Ham United,D
+2,2,06-12-2008,2008/2009,Newcastle United,Stoke City,D
+1,3,06-12-2008,2008/2009,Blackburn Rovers,Liverpool,A
+2,1,06-12-2008,2008/2009,Hull City,Middlesbrough,H
+1,0,06-12-2008,2008/2009,Manchester United,Sunderland,H
+1,0,06-12-2008,2008/2009,Arsenal,Wigan Athletic,H
+0,2,06-12-2008,2008/2009,Bolton Wanderers,Chelsea,A
+1,1,06-12-2008,2008/2009,Fulham,Manchester City,D
+1,1,07-12-2008,2008/2009,West Bromwich Albion,Portsmouth,D
+2,3,07-12-2008,2008/2009,Everton,Aston Villa,A
+0,2,08-12-2008,2008/2009,West Ham United,Tottenham Hotspur,A
+1,1,13-12-2008,2008/2009,Middlesbrough,Arsenal,D
+0,0,13-12-2008,2008/2009,Tottenham Hotspur,Manchester United,D
+4,0,13-12-2008,2008/2009,Sunderland,West Bromwich Albion,H
+0,0,13-12-2008,2008/2009,Stoke City,Fulham,D
+0,1,13-12-2008,2008/2009,Manchester City,Everton,A
+4,2,13-12-2008,2008/2009,Aston Villa,Bolton Wanderers,H
+3,0,13-12-2008,2008/2009,Wigan Athletic,Blackburn Rovers,H
+2,2,13-12-2008,2008/2009,Liverpool,Hull City,D
+0,3,14-12-2008,2008/2009,Portsmouth,Newcastle United,A
+1,1,14-12-2008,2008/2009,Chelsea,West Ham United,D
+3,0,20-12-2008,2008/2009,Blackburn Rovers,Stoke City,H
+0,1,20-12-2008,2008/2009,West Ham United,Aston Villa,A
+2,1,20-12-2008,2008/2009,Bolton Wanderers,Portsmouth,H
+3,0,20-12-2008,2008/2009,Fulham,Middlesbrough,H
+1,4,20-12-2008,2008/2009,Hull City,Sunderland,A
+2,1,21-12-2008,2008/2009,Newcastle United,Tottenham Hotspur,H
+2,1,21-12-2008,2008/2009,West Bromwich Albion,Manchester City,H
+1,1,21-12-2008,2008/2009,Arsenal,Liverpool,D
+0,0,22-12-2008,2008/2009,Everton,Chelsea,D
+2,0,26-12-2008,2008/2009,Chelsea,West Bromwich Albion,H
+5,1,26-12-2008,2008/2009,Manchester City,Hull City,H
+3,0,26-12-2008,2008/2009,Liverpool,Bolton Wanderers,H
+1,4,26-12-2008,2008/2009,Portsmouth,West Ham United,A
+0,1,26-12-2008,2008/2009,Stoke City,Manchester United,A
+2,2,26-12-2008,2008/2009,Aston Villa,Arsenal,D
+0,0,26-12-2008,2008/2009,Sunderland,Blackburn Rovers,D
+2,1,26-12-2008,2008/2009,Wigan Athletic,Newcastle United,H
+0,0,26-12-2008,2008/2009,Tottenham Hotspur,Fulham,D
+0,1,26-12-2008,2008/2009,Middlesbrough,Everton,A
+2,2,28-12-2008,2008/2009,Fulham,Chelsea,D
+2,1,28-12-2008,2008/2009,West Ham United,Stoke City,H
+2,0,28-12-2008,2008/2009,West Bromwich Albion,Tottenham Hotspur,H
+3,0,28-12-2008,2008/2009,Everton,Sunderland,H
+0,1,28-12-2008,2008/2009,Bolton Wanderers,Wigan Athletic,A
+2,2,28-12-2008,2008/2009,Blackburn Rovers,Manchester City,D
+1,5,28-12-2008,2008/2009,Newcastle United,Liverpool,A
+1,0,28-12-2008,2008/2009,Arsenal,Portsmouth,H
+1,0,29-12-2008,2008/2009,Manchester United,Middlesbrough,H
+0,1,30-12-2008,2008/2009,Hull City,Aston Villa,A
+2,0,10-01-2009,2008/2009,Everton,Hull City,H
+2,2,10-01-2009,2008/2009,Newcastle United,West Ham United,D
+2,1,10-01-2009,2008/2009,Aston Villa,West Bromwich Albion,H
+0,0,10-01-2009,2008/2009,Stoke City,Liverpool,D
+1,1,10-01-2009,2008/2009,Middlesbrough,Sunderland,D
+1,0,10-01-2009,2008/2009,Arsenal,Bolton Wanderers,H
+1,0,11-01-2009,2008/2009,Wigan Athletic,Tottenham Hotspur,H
+3,0,11-01-2009,2008/2009,Manchester United,Chelsea,H
+1,0,14-01-2009,2008/2009,Manchester United,Wigan Athletic,H
+0,1,17-01-2009,2008/2009,Bolton Wanderers,Manchester United,A
+1,2,17-01-2009,2008/2009,Sunderland,Aston Villa,A
+1,3,17-01-2009,2008/2009,Hull City,Arsenal,A
+1,0,17-01-2009,2008/2009,Manchester City,Wigan Athletic,H
+3,0,17-01-2009,2008/2009,Blackburn Rovers,Newcastle United,H
+2,1,17-01-2009,2008/2009,Chelsea,Stoke City,H
+3,0,17-01-2009,2008/2009,West Bromwich Albion,Middlesbrough,H
+3,1,18-01-2009,2008/2009,West Ham United,Fulham,H
+1,1,18-01-2009,2008/2009,Tottenham Hotspur,Portsmouth,D
+1,1,19-01-2009,2008/2009,Liverpool,Everton,D
+0,1,27-01-2009,2008/2009,Portsmouth,Aston Villa,A
+1,0,27-01-2009,2008/2009,Sunderland,Fulham,H
+0,5,27-01-2009,2008/2009,West Bromwich Albion,Manchester United,A
+3,1,27-01-2009,2008/2009,Tottenham Hotspur,Stoke City,H
+2,1,28-01-2009,2008/2009,Manchester City,Newcastle United,H
+1,1,28-01-2009,2008/2009,Everton,Arsenal,D
+2,0,28-01-2009,2008/2009,West Ham United,Hull City,H
+2,2,28-01-2009,2008/2009,Blackburn Rovers,Bolton Wanderers,D
+1,1,28-01-2009,2008/2009,Wigan Athletic,Liverpool,D
+2,0,28-01-2009,2008/2009,Chelsea,Middlesbrough,H
+0,0,31-01-2009,2008/2009,Middlesbrough,Blackburn Rovers,D
+0,0,31-01-2009,2008/2009,Aston Villa,Wigan Athletic,D
+1,0,31-01-2009,2008/2009,Manchester United,Everton,H
+1,0,31-01-2009,2008/2009,Stoke City,Manchester City,H
+3,2,31-01-2009,2008/2009,Bolton Wanderers,Tottenham Hotspur,H
+0,0,31-01-2009,2008/2009,Arsenal,West Ham United,D
+2,2,31-01-2009,2008/2009,Hull City,West Bromwich Albion,D
+3,1,31-01-2009,2008/2009,Fulham,Portsmouth,H
+2,0,01-02-2009,2008/2009,Liverpool,Chelsea,H
+1,1,01-02-2009,2008/2009,Newcastle United,Sunderland,D
+1,0,07-02-2009,2008/2009,Manchester City,Middlesbrough,H
+2,3,07-02-2009,2008/2009,West Bromwich Albion,Newcastle United,A
+2,0,07-02-2009,2008/2009,Sunderland,Stoke City,H
+0,0,07-02-2009,2008/2009,Chelsea,Hull City,D
+3,0,07-02-2009,2008/2009,Everton,Bolton Wanderers,H
+0,2,07-02-2009,2008/2009,Blackburn Rovers,Aston Villa,A
+2,3,07-02-2009,2008/2009,Portsmouth,Liverpool,A
+0,0,07-02-2009,2008/2009,Wigan Athletic,Fulham,D
+0,0,08-02-2009,2008/2009,Tottenham Hotspur,Arsenal,D
+0,1,08-02-2009,2008/2009,West Ham United,Manchester United,A
+2,0,14-02-2009,2008/2009,Portsmouth,Manchester City,H
+3,0,18-02-2009,2008/2009,Manchester United,Fulham,H
+0,0,21-02-2009,2008/2009,Middlesbrough,Wigan Athletic,D
+2,2,21-02-2009,2008/2009,Stoke City,Portsmouth,D
+0,0,21-02-2009,2008/2009,Arsenal,Sunderland,D
+2,1,21-02-2009,2008/2009,Bolton Wanderers,West Ham United,H
+0,1,21-02-2009,2008/2009,Aston Villa,Chelsea,A
+2,1,21-02-2009,2008/2009,Manchester United,Blackburn Rovers,H
+2,0,22-02-2009,2008/2009,Fulham,West Bromwich Albion,H
+0,0,22-02-2009,2008/2009,Newcastle United,Everton,D
+1,1,22-02-2009,2008/2009,Liverpool,Manchester City,D
+1,2,23-02-2009,2008/2009,Hull City,Tottenham Hotspur,A
+2,0,28-02-2009,2008/2009,Middlesbrough,Liverpool,H
+0,0,28-02-2009,2008/2009,Arsenal,Fulham,D
+2,0,28-02-2009,2008/2009,Everton,West Bromwich Albion,H
+2,1,28-02-2009,2008/2009,Chelsea,Wigan Athletic,H
+1,0,01-03-2009,2008/2009,Bolton Wanderers,Newcastle United,H
+1,2,01-03-2009,2008/2009,Hull City,Blackburn Rovers,A
+1,0,01-03-2009,2008/2009,West Ham United,Manchester City,H
+2,2,01-03-2009,2008/2009,Aston Villa,Stoke City,D
+1,3,03-03-2009,2008/2009,West Bromwich Albion,Arsenal,A
+2,0,03-03-2009,2008/2009,Liverpool,Sunderland,H
+0,1,03-03-2009,2008/2009,Portsmouth,Chelsea,A
+1,2,04-03-2009,2008/2009,Newcastle United,Manchester United,A
+2,0,04-03-2009,2008/2009,Stoke City,Bolton Wanderers,H
+4,0,04-03-2009,2008/2009,Tottenham Hotspur,Middlesbrough,H
+0,1,04-03-2009,2008/2009,Fulham,Hull City,A
+0,0,04-03-2009,2008/2009,Blackburn Rovers,Everton,D
+0,1,04-03-2009,2008/2009,Wigan Athletic,West Ham United,A
+2,0,04-03-2009,2008/2009,Manchester City,Aston Villa,H
+1,1,07-03-2009,2008/2009,Sunderland,Tottenham Hotspur,D
+1,2,11-03-2009,2008/2009,Fulham,Blackburn Rovers,A
+4,0,14-03-2009,2008/2009,Arsenal,Blackburn Rovers,H
+3,1,14-03-2009,2008/2009,Everton,Stoke City,H
+1,3,14-03-2009,2008/2009,Bolton Wanderers,Fulham,A
+1,1,14-03-2009,2008/2009,Middlesbrough,Portsmouth,D
+1,2,14-03-2009,2008/2009,Sunderland,Wigan Athletic,A
+1,4,14-03-2009,2008/2009,Manchester United,Liverpool,A
+1,1,14-03-2009,2008/2009,Hull City,Newcastle United,D
+1,2,15-03-2009,2008/2009,Aston Villa,Tottenham Hotspur,A
+1,0,15-03-2009,2008/2009,Chelsea,Manchester City,H
+0,0,16-03-2009,2008/2009,West Ham United,West Bromwich Albion,D
+1,0,21-03-2009,2008/2009,Tottenham Hotspur,Chelsea,H
+1,3,21-03-2009,2008/2009,Newcastle United,Arsenal,A
+2,0,21-03-2009,2008/2009,Fulham,Manchester United,H
+1,1,21-03-2009,2008/2009,Blackburn Rovers,West Ham United,D
+1,0,21-03-2009,2008/2009,Stoke City,Middlesbrough,H
+2,1,21-03-2009,2008/2009,Portsmouth,Everton,H
+1,1,21-03-2009,2008/2009,West Bromwich Albion,Bolton Wanderers,D
+1,0,22-03-2009,2008/2009,Wigan Athletic,Hull City,H
+5,0,22-03-2009,2008/2009,Liverpool,Aston Villa,H
+1,0,22-03-2009,2008/2009,Manchester City,Sunderland,H
+0,2,04-04-2009,2008/2009,Newcastle United,Chelsea,A
+0,2,04-04-2009,2008/2009,West Bromwich Albion,Stoke City,A
+2,0,04-04-2009,2008/2009,Arsenal,Manchester City,H
+4,1,04-04-2009,2008/2009,Bolton Wanderers,Middlesbrough,H
+2,1,04-04-2009,2008/2009,Blackburn Rovers,Tottenham Hotspur,H
+2,0,04-04-2009,2008/2009,West Ham United,Sunderland,H
+0,1,04-04-2009,2008/2009,Fulham,Liverpool,A
+0,0,04-04-2009,2008/2009,Hull City,Portsmouth,D
+3,2,05-04-2009,2008/2009,Manchester United,Aston Villa,H
+4,0,05-04-2009,2008/2009,Everton,Wigan Athletic,H
+3,1,11-04-2009,2008/2009,Middlesbrough,Hull City,H
+1,1,11-04-2009,2008/2009,Stoke City,Newcastle United,D
+1,2,11-04-2009,2008/2009,Sunderland,Manchester United,A
+1,0,11-04-2009,2008/2009,Tottenham Hotspur,West Ham United,H
+4,3,11-04-2009,2008/2009,Chelsea,Bolton Wanderers,H
+2,2,11-04-2009,2008/2009,Portsmouth,West Bromwich Albion,D
+4,0,11-04-2009,2008/2009,Liverpool,Blackburn Rovers,H
+1,4,11-04-2009,2008/2009,Wigan Athletic,Arsenal,A
+1,3,12-04-2009,2008/2009,Manchester City,Fulham,A
+3,3,12-04-2009,2008/2009,Aston Villa,Everton,D
+0,0,18-04-2009,2008/2009,Middlesbrough,Fulham,D
+1,0,18-04-2009,2008/2009,Stoke City,Blackburn Rovers,H
+1,0,18-04-2009,2008/2009,Sunderland,Hull City,H
+1,0,18-04-2009,2008/2009,Portsmouth,Bolton Wanderers,H
+1,1,18-04-2009,2008/2009,Aston Villa,West Ham United,D
+1,0,19-04-2009,2008/2009,Tottenham Hotspur,Newcastle United,H
+4,2,19-04-2009,2008/2009,Manchester City,West Bromwich Albion,H
+4,4,21-04-2009,2008/2009,Liverpool,Arsenal,D
+2,0,22-04-2009,2008/2009,Manchester United,Portsmouth,H
+0,0,22-04-2009,2008/2009,Chelsea,Everton,D
+0,1,25-04-2009,2008/2009,West Ham United,Chelsea,A
+1,2,25-04-2009,2008/2009,Everton,Manchester City,A
+1,0,25-04-2009,2008/2009,Fulham,Stoke City,H
+5,2,25-04-2009,2008/2009,Manchester United,Tottenham Hotspur,H
+3,0,25-04-2009,2008/2009,West Bromwich Albion,Sunderland,H
+1,3,25-04-2009,2008/2009,Hull City,Liverpool,A
+1,1,25-04-2009,2008/2009,Bolton Wanderers,Aston Villa,D
+2,0,26-04-2009,2008/2009,Arsenal,Middlesbrough,H
+2,0,26-04-2009,2008/2009,Blackburn Rovers,Wigan Athletic,H
+0,0,27-04-2009,2008/2009,Newcastle United,Portsmouth,D
+1,0,02-05-2009,2008/2009,Tottenham Hotspur,West Bromwich Albion,H
+0,1,02-05-2009,2008/2009,Stoke City,West Ham United,A
+0,2,02-05-2009,2008/2009,Middlesbrough,Manchester United,A
+3,1,02-05-2009,2008/2009,Chelsea,Fulham,H
+3,1,02-05-2009,2008/2009,Manchester City,Blackburn Rovers,H
+0,3,02-05-2009,2008/2009,Portsmouth,Arsenal,A
+0,0,02-05-2009,2008/2009,Wigan Athletic,Bolton Wanderers,D
+0,2,03-05-2009,2008/2009,Sunderland,Everton,A
+3,0,03-05-2009,2008/2009,Liverpool,Newcastle United,H
+1,0,04-05-2009,2008/2009,Aston Villa,Hull City,H
+0,0,09-05-2009,2008/2009,Bolton Wanderers,Sunderland,D
+2,0,09-05-2009,2008/2009,Blackburn Rovers,Portsmouth,H
+0,3,09-05-2009,2008/2009,West Ham United,Liverpool,A
+1,2,09-05-2009,2008/2009,Hull City,Stoke City,A
+3,1,09-05-2009,2008/2009,West Bromwich Albion,Wigan Athletic,H
+0,0,09-05-2009,2008/2009,Everton,Tottenham Hotspur,D
+3,1,09-05-2009,2008/2009,Fulham,Aston Villa,H
+1,4,10-05-2009,2008/2009,Arsenal,Chelsea,A
+2,0,10-05-2009,2008/2009,Manchester United,Manchester City,H
+3,1,11-05-2009,2008/2009,Newcastle United,Middlesbrough,H
+1,2,13-05-2009,2008/2009,Wigan Athletic,Manchester United,A
+2,0,16-05-2009,2008/2009,Stoke City,Wigan Athletic,H
+3,1,16-05-2009,2008/2009,Everton,West Ham United,H
+1,1,16-05-2009,2008/2009,Middlesbrough,Aston Villa,D
+0,1,16-05-2009,2008/2009,Newcastle United,Fulham,A
+2,1,16-05-2009,2008/2009,Tottenham Hotspur,Manchester City,H
+0,0,16-05-2009,2008/2009,Manchester United,Arsenal,D
+1,1,16-05-2009,2008/2009,Bolton Wanderers,Hull City,D
+0,2,17-05-2009,2008/2009,West Bromwich Albion,Liverpool,A
+2,0,17-05-2009,2008/2009,Chelsea,Blackburn Rovers,H
+3,1,18-05-2009,2008/2009,Portsmouth,Sunderland,H
+0,0,24-05-2009,2008/2009,Blackburn Rovers,West Bromwich Albion,D
+0,2,24-05-2009,2008/2009,Fulham,Everton,A
+3,1,24-05-2009,2008/2009,Liverpool,Tottenham Hotspur,H
+2,1,24-05-2009,2008/2009,West Ham United,Middlesbrough,H
+0,1,24-05-2009,2008/2009,Hull City,Manchester United,A
+1,0,24-05-2009,2008/2009,Wigan Athletic,Portsmouth,H
+4,1,24-05-2009,2008/2009,Arsenal,Stoke City,H
+2,3,24-05-2009,2008/2009,Sunderland,Chelsea,A
+1,0,24-05-2009,2008/2009,Aston Villa,Newcastle United,H
+1,0,24-05-2009,2008/2009,Manchester City,Bolton Wanderers,H
