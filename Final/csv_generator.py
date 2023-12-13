@@ -25,62 +25,28 @@ def get_seasons(date_array):
 database = 'database.sqlite'
 conn = sqlite3.connect(database)
 
-players = pd.read_sql("""SELECT DISTINCT date from player_attributes WHERE date LIKE '2016%'""", conn).dropna()
-print(len(players))
-print(players.head())
-
-
-# teams = pd.read_sql("""SELECT Match.id, Match.home_team_api_id as home_team_id, home_buildup_play_speed, home_buildup_play_dribbling, home_build_play_passing, home_buildup_chance_creation_passing, home_buildup_chance_creation_crossing, home_buildup_chance_creation_shooting, home_buildup_defence_pressure, home_defence_aggression, home_defence_team_width
-#                     FROM Match JOIN (
-#                         SELECT
-#                     team_api_id as home_team_api_id,
-#                     buildUpPlaySpeed as home_buildup_play_speed,
-#                     buildUpPlayDribbling as home_buildup_play_dribbling,
-#                     buildUpPlayPassing as home_build_play_passing,
-#                     chanceCreationPassing as home_buildup_chance_creation_passing,
-#                     chanceCreationCrossing as home_buildup_chance_creation_crossing,
-#                     chanceCreationShooting as home_buildup_chance_creation_shooting,
-#                     defencePressure as home_buildup_defence_pressure,
-#                     defenceAggression as home_defence_aggression,
-#                     defenceTeamWidth as home_defence_team_width
-#                     FROM Team_Attributes
-#                     WHERE date LIKE '2015%') as team_attr
-#                     ON Match.home_team_api_id = team_attr.home_team_api_id;""", conn).dropna()
-
-matches = pd.read_sql("""SELECT home_team_api_id, away_team_api_id, home_team_goal, away_team_goal, season
-                      FROM Match
-                      WHERE season NOT LIKE '2008/2009' AND season NOT LIKE '2012/2013'""", conn)
-
 # attributes = ['buildUpPlaySpeed', 'buildUpPlayPassing']
-teams = pd.read_sql("""SELECT * FROM Team_attributes""", conn)
-teams_dates = teams['date']
-teams.drop(['id', 'team_fifa_api_id', 'date'], axis=1, inplace=True)
-# teams = teams.select_dtypes(exclude=['object'])
-# teams = teams[['team_api_id'] + attributes]
-teams['season'] = get_seasons(teams_dates)
-
+matches = pd.read_sql("""SELECT * FROM Match""", conn)
+matches = matches[['home_team_api_id', 'away_team_api_id', 'home_team_goal', 'away_team_goal', 'B365H', 'B365D', 'B365A', 'BWH', 'BWD', 'BWA', 'IWH', 'IWD', 'IWA', 'LBH', 'LBD', 'LBA', 'WHH', 'WHD', 'WHA', 'SJH', 'SJD', 'SJA', 'VCH', 'VCD', 'VCA', 'GBH', 'GBD', 'GBA', 'BSH', 'BSD', 'BSA']]
+matches.dropna(inplace=True)
 # for attribute in attributes:
 #     teams[attribute] = (teams[attribute] - teams[attribute].min()) / (teams[attribute].max() - teams[attribute].min())
 
-home_teams = teams.add_prefix('home_')
-home_teams.rename(columns={'home_season': 'season'}, inplace=True)
+# home_teams = teams.add_prefix('home_')
+# home_teams.rename(columns={'home_season': 'season'}, inplace=True)
 
-away_teams = teams.add_prefix('away_')
-away_teams.rename(columns={'away_season': 'season'}, inplace=True)
+# away_teams = teams.add_prefix('away_')
+# away_teams.rename(columns={'away_season': 'season'}, inplace=True)
 
-matches_teams = pd.merge(matches, home_teams, on=['season', 'home_team_api_id'])
-matches_teams = pd.merge(matches_teams, away_teams, on=['season', 'away_team_api_id'])
+# matches_teams = pd.merge(matches, home_teams, on=['season', 'home_team_api_id'])
+# matches_teams = pd.merge(matches_teams, away_teams, on=['season', 'away_team_api_id'])
 
 # condition = matches_teams['home_' + attribute] == matches_teams['away_' + attribute]
 # matches_teams = matches_teams.loc[~condition]
-matches_teams.drop(['season'], axis=1, inplace=True)
 
 # matches_teams.drop(['home_id', 'away_id'], axis=1, inplace=True)
 
-print(f'Hay {len(matches_teams)} registros')
-print(matches_teams.head())
-
-matches_teams.to_csv('teams.csv', index=False)
+matches.to_csv('matches_bets.csv', index=False)
 
 ####################################################### PLAYERS ##############################################################
 
